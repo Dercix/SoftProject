@@ -1,0 +1,26 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:55555/soft?setUnicode=true&characterEncoding=utf8&useAffectedRows=true
+    username: root
+    password: ENC(R06V8LLM5jlnhsGf/g8ieWInjvQFbQ4M)
+
+
+mybatis:
+  type-aliases-package: com.auggie.student_server.entity
+  mapper-locations: classpath:mapper/*.xml
+
+server:
+  port: 10086
+  servlet:
+    session:
+      timeout: 1800 # session超时时间为1800秒
+
+jasypt:
+  encryptor:
+    password: salt
+    algorithm: PBEWithMD5AndDES
+    iv-generator-classname: org.jasypt.iv.NoIvGenerator
+
+
+
